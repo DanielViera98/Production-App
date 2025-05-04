@@ -6,27 +6,30 @@ namespace Redo_Management;
 
 public partial class SubmissionPage : ContentPage, INotifyPropertyChanged
 {
-	public SubmissionPage()
+    public ObservableCollection<Department> Departments => SettingsService.Settings.Departments;
+    private Department selectedDepartment;
+
+    public SubmissionPage()
 	{
 		InitializeComponent();
 		BindingContext = this;
-	}
 
-    public ObservableCollection<string> DepartmentOptions { get; } = new()
-	{
-		SettingsModel() test = new SettingsModel();
-	};
+        //Add department names to picker
+        foreach (var dept in SettingsService.Settings.Departments)
+            DepartmentOptions.Add(dept.Name); 
+    }
 
-    string selectedOption = "";
-    public string SelectedOption
+    public ObservableCollection<string> DepartmentOptions { get; } = new(){};
+
+    public Department SelectedDepartment
     {
-        get => selectedOption;
+        get => selectedDepartment;
         set
         {
-            if (selectedOption != value)
+            if (selectedDepartment != value)
             {
-                selectedOption = value;
-                OnPropertyChanged(nameof(SelectedOption));
+                selectedDepartment = value;
+                OnPropertyChanged(nameof(selectedDepartment));
             }
         }
     }

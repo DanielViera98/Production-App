@@ -1,13 +1,34 @@
 using System.Text.Json;
 using System.Collections.ObjectModel;
 using System.Collections;
+//using PassKit;
+//using AuthenticationServices;
 
 namespace Redo_Management.Services;
 
+public class Department
+{
+    public required string Name { get; set; }
+    public DateTime LastOrganized { get; set; }
+    public Employee OrganizedBy { get; set; } = new Employee
+    {
+        Name = "",
+        Position = "",
+    };
+}
+public class Employee
+{
+    public required string Name { get; set; }
+    public required string Position { get; set; }
+}
+public class Role
+{
+    public required string Name { get; set; }
+}
 public class SettingsModel
 {
     public ObservableCollection<string> Roles { get; set; } = new();
-    public ObservableCollection<string> Departments { get; set; } = new();
+    public ObservableCollection<Department> Departments { get; set; } = new();
     // Add more settings fields as needed
 }
 
@@ -55,6 +76,28 @@ public static class SettingsService
     private static SettingsModel GetDefaultSettings() => new()
     {
         Roles = new ObservableCollection<string> { "Manager", "Assistant Manager", "Employee" },
-        Departments = new ObservableCollection<string> { "Freezers", "Aisle 1", "Aisle 2" }
+        Departments = new ObservableCollection<Department>
+        {
+            new Department
+            {
+                Name = "Aisle 1",
+                LastOrganized = DateTime.Now,
+                OrganizedBy = new Employee
+                {
+                    Name = "John Doe",
+                    Position = "Manager"
+                }
+            },
+            new Department
+            {
+                Name = "Aisle 2",
+                LastOrganized = DateTime.Now,
+                OrganizedBy = new Employee
+                {
+                    Name = "Jane Smith",
+                    Position = "Assistant Manager"
+                }
+            },
+        }
     };
 }
