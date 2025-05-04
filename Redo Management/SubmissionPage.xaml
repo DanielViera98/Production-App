@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Redo_Management.Views"
+             x:Class="Redo_Management.SubmissionPage"
+             Title="SubmissionPage">
+    <Grid RowDefinitions="Auto, *, Auto">
+        <views:HeaderView Grid.Row="0"/>
+        <views:FooterView Grid.Row="2"/>
+
+        <Border Stroke="Black" StrokeThickness="3" Margin="50">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="8"/>
+            </Border.StrokeShape>
+            <!-- Submission Grid -->
+            <Grid Grid.Row="1" RowDefinitions="*, *, *, 320, *" Padding="20">
+                <Button Text="User Name" Grid.Row="0" Margin="10"/>
+                <Button Text="Time of Submission" Grid.Row="1" Margin="10"/>
+                <Picker Title="Choose Department" ItemsSource="{Binding DepartmentOptions}" 
+                        Grid.Row="2" Margin="10"/>
+                <Border Stroke="Black" StrokeThickness="2" Margin="10" Grid.Row="3">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <Label Text="Notes" Margin="10"/>
+                </Border>
+                <Border Stroke="Black" StrokeThickness="2" Margin="10" Grid.Row="4">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="google_sheets_logo.svg" Grid.Column="0" 
+                            HeightRequest="30" WidthRequest="30"/>
+                        <Label Grid.Column="1" BackgroundColor="black"/>
+                        <Label Grid.Column="2" Text="Google Sheets Name" Margin="10"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

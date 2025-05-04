@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Redo_Management.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="Welcome to Redo Productivity!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel=" Level1" />
+
+            <Image
+                Source="redo_arrow_ai.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Redo Logo, Redo with an arrow curling from the O under the text" />
+
+            <Label
+                Text="Sign In."
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"/>
+
+            <Label
+                Text="Enter your username and password to sign in"
+                Style="{StaticResource Text}"
+                SemanticProperties.HeadingLevel="Level3"/>
+
+            <Entry
+                x:Name="UsernameEntry"
+                Placeholder="Username"
+                Style="{StaticResource Entry}"
+                SemanticProperties.HeadingLevel="Level4"/>
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                Style="{StaticResource Entry}"
+                SemanticProperties.HeadingLevel="Level4"/>
+            
+            <Button
+                x:Name="SignInBtn"
+                Text="Sign In" 
+                Clicked="OnSignInClicked"
+                HorizontalOptions="Fill" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

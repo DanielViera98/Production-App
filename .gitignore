@@ -1,0 +1,22 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+.vs/
+*.user
+*.suo
+
+## Build artifacts
+bin/
+obj/
+*.log
+
+## Maui specific
+*.apk
+*.aab
+*.xcprivacy
+
+## Rider
+.idea/
+
+## OS generated
+.DS_Store
+Thumbs.db

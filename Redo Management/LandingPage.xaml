@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            xmlns:views="clr-namespace:Redo_Management.Views"
+            x:Class="Redo_Management.LandingPage"  
+            Title="LandingPage">
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <!-- Implement Header and Footer -->
+        <views:HeaderView Grid.Row="0"/>
+        <views:FooterView Grid.Row="2"/>
+        
+        <!-- Main Content Grid -->
+        <Grid Grid.Row="1" BackgroundColor="White" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Buttons Grid -->
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Border StrokeThickness="2" Padding="10">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                </Border>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Text="Create Submission" FontSize="16" Margin="0,0,0,10"
+                        Clicked="OnCreateSubmissionClicked"/>
+                    <Button Grid.Row="1" Text="Log Out" FontSize="16" Margin="0,0,0,10" 
+                        Clicked="OnLogOutClicked"/> <!--Not correct Implementation of logout-->
+                    <Button Grid.Row="2" FontSize="16" Text="Settings"
+                        Clicked="OnSettingsClicked" />
+                </Grid>
+            </Grid>
+
+            <!-- Display Grid -->
+            <Grid Grid.Row = "1" Grid.Column= "1">
+                <Border StrokeThickness="2" Padding="10" >
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <Label Text="Display Area" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>
