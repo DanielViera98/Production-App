@@ -1,5 +1,5 @@
-namespace Redo_Management;
-
+namespace Redo_Management.Pages;
+using Redo_Management.Pages.Sign_In;
 public partial class LandingPage : ContentPage
 {
 	public LandingPage()
@@ -15,7 +15,7 @@ public partial class LandingPage : ContentPage
     private void OnLogOutClicked(object sender, EventArgs e)
     {
         // Handle sign-in logic here
-        Navigation.PushAsync(new MainPage());
+        Navigation.PushAsync(new SignInView());
     }
 
     private void OnSettingsClicked(object sender, EventArgs e)

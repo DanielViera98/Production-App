@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "694328172345",
+    "project_id": "productivity-app-8efc0",
+    "storage_bucket": "productivity-app-8efc0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694328172345:android:ed3a8fc100df159775d2e8",
+        "android_client_info": {
+          "package_name": "com.vieraengineering.productivityApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLmZRLm3XBfqwjt_QJPomSC8NqMg6fZto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

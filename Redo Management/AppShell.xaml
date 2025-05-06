@@ -3,14 +3,14 @@
     x:Class="Redo_Management.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Redo_Management"
+    xmlns:local="clr-namespace:Redo_Management.Pages"
     xmlns:views="clr-namespace:Redo_Management.Views"
     Shell.FlyoutBehavior="Flyout"
     Title="Redo_Management">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:SignInView}"
         Route="MainPage" />
 
 </Shell>

@@ -60,13 +60,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="LandingPage.xaml.cs">
+	  <Compile Update="Pages\LandingPage.xaml.cs">
 	    <DependentUpon>LandingPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Sign In\SignInView.xaml.cs">
+	    <DependentUpon>SignInView.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\FooterView.xaml.cs">
 	    <DependentUpon>FooterView.xaml</DependentUpon>
@@ -74,13 +80,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="LandingPage.xaml">
+	  <MauiXaml Update="Pages\LandingPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="SettingsPage.xaml">
+	  <MauiXaml Update="Pages\SettingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="SubmissionPage.xaml">
+	  <MauiXaml Update="Pages\SubmissionPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\FooterView.xaml">

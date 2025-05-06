@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
             xmlns:views="clr-namespace:Redo_Management.Views"
-            x:Class="Redo_Management.LandingPage"  
+            x:Class="Redo_Management.Pages.LandingPage"  
             Title="LandingPage">
     <Grid RowDefinitions="Auto, *, Auto">
 
